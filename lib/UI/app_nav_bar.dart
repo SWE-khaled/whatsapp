@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application_4/Updates/Updates_bar_nav.dart';
+import 'package:flutter_application_4/Updates/Updates_screen.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar({super.key});
@@ -68,6 +69,14 @@ class MyNavBar extends StatelessWidget {
       selectedItemColor: const Color(0xFF008069),
       unselectedItemColor: const Color.fromARGB(255, 0, 0, 0),
       type: BottomNavigationBarType.fixed,
+
+onTap: (index){
+       if(index==1)
+       {
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> UpdatesScreen(),)
+        );
+       }
+      }, 
 
       items: const [
         BottomNavigationBarItem(

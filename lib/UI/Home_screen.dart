@@ -13,8 +13,7 @@ class HomeScreen extends StatelessWidget {
     return  Scaffold(
       backgroundColor: Colors.white,
       appBar: MyAppBar(),
-      bottomNavigationBar: MyNavBar(currentIndex: 0),
-      
+        bottomNavigationBar: MyNavBar(currentIndex: 0),
       body: Column(
        
         children: [
@@ -27,10 +26,16 @@ class HomeScreen extends StatelessWidget {
                  separatorBuilder: (context,index)=>SizedBox(height: 6,),
                   itemCount: chats.length),
             )
-                ),
-         
+        ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: null,
+        backgroundColor:  Color(0xFF00A884),
+        shape: CircleBorder(),
+        child: Icon(Icons.message, color: Colors.white,size: 24,),
+      ),
+    
     );
   }
 }
