@@ -56,9 +56,9 @@ Widget _myChat(ChatModels chat) {
                       Row(
                         children: [
                           
-                          Text(chat.name ??"" ,style:WhatsappTextStyles.name),
+                          Expanded(child: Text(chat.name ??"" ,style:WhatsappTextStyles.name,overflow: TextOverflow.ellipsis,maxLines: 1,)),
                           Spacer(),
-                          Text( chat.time ??"",style:WhatsappTextStyles.time ),
+                          Text( chat.time ??"",style:WhatsappTextStyles.time ,),
                         ],
                       ),
                       SizedBox(height: 4,),
@@ -74,7 +74,7 @@ Widget _messageBuilder(ChatModels chat){
   if (chat.messageType==ChatType.text){
     return Row(
       children: [
-        Text(chat.message ??"",style: WhatsappTextStyles.message),
+        Expanded(child: Text(chat.message ??"",style: WhatsappTextStyles.message ,maxLines: 1,overflow: TextOverflow.ellipsis,)),
          SizedBox(height: 8,)
         ],
     );
@@ -98,7 +98,7 @@ Widget _messageBuilder(ChatModels chat){
     );
   }
    return Text(
-    chat.message ?? "",style: tools(),);
+    chat.message ?? "",style: tools(),maxLines: 1,overflow: TextOverflow.ellipsis,);
 }
 
 TextStyle tools() => TextStyle(fontSize: 14,color: Color(0xFF667781),);

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_4/Updates/Updates_bar_nav.dart';
 import 'package:flutter_application_4/Updates/Updates_screen.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
