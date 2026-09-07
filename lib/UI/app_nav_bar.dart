@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_4/Communities/communities_screen.dart';
 import 'package:flutter_application_4/Updates/Updates_screen.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -74,6 +75,9 @@ onTap: (index){
        {
         Navigator.push(context, MaterialPageRoute(builder: (context)=> UpdatesScreen(),)
         );
+       }
+       else if (index==2){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> CommunitiesScreen(),));
        }
       }, 
 
