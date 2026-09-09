@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_4/Calls/calls_screen.dart';
+import 'package:flutter_application_4/Communities/communities_screen.dart';
 import 'package:flutter_application_4/UI/Home_screen.dart';
 import 'package:flutter_application_4/Updates/Updates_screen.dart';
 
-
-class CommunitiesAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CommunitiesAppBar({super.key});
+class CallAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const CallAppBar({super.key});
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -17,17 +17,18 @@ class CommunitiesAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.white,
       elevation: 0,
      scrolledUnderElevation: 0, 
-  title: Text("Communities",style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600,color: Color(0xFF111B21),letterSpacing: -0.2)),
+  title: Text("Calls",style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600,color: Color(0xFF111B21),letterSpacing: -0.2)),
     actions: [
-      IconButton(onPressed: (){}, icon: Icon(Icons.more_vert,color:Color(0xFF111B21),size: 24,))
+      IconButton(onPressed: (){}, icon: Icon(Icons.search,color:Color(0xFF111B21),size: 24,)),
+      IconButton(onPressed: (){}, icon: Icon(Icons.more_vert_rounded,color:Color(0xFF111B21),size: 24,))
     ],
     );
   }
 }
 
-class CommunitiesBarNav extends StatelessWidget {
+class CallsBarNav extends StatelessWidget {
   final int currentIndex;
-  const CommunitiesBarNav({super.key, required this.currentIndex});
+  const CallsBarNav({super.key, required this.currentIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +47,10 @@ class CommunitiesBarNav extends StatelessWidget {
        else if (index==1){
         Navigator.push(context, MaterialPageRoute(builder: (context)=>const UpdatesScreen(),),);
        }
-       else if(index==3){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>const CallsScreen(),),);
+       else if(index==2){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>const CommunitiesScreen(),),);
        }
-      
+       //else if(index==3){}
       },
 
       items: const [

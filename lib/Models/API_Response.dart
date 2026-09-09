@@ -1,10 +1,10 @@
 List<Map<String, dynamic>> ApiResponse = [
     {
       "id": 1,
-      "name": "Ahmed ",
+      "name": "Jason ",
       "message": "Hey, how are you?",
       "time": "5:30 PM",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTLKAW1zadB8CAjYC63Z-ZghmLs-VWb5D9QMqs1WxFnS1SYR3WeZSJEoE&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQeJr-TR-h9DduR4rF4JkApPPQGbC6N3n7TyF8Et0D2A&s=10",
       "message_type": "text",
     },
     {

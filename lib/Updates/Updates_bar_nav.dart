@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_4/Calls/calls_screen.dart';
 import 'package:flutter_application_4/Communities/communities_screen.dart';
 import 'package:flutter_application_4/UI/Home_screen.dart';
 
@@ -12,6 +13,7 @@ class UpdatesAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      automaticallyImplyLeading: false,
       backgroundColor: Colors.white,
       elevation: 0,
      scrolledUnderElevation: 0, 
@@ -44,6 +46,9 @@ class UpdatesNavBar extends StatelessWidget {
        }
        else if(index==2){
          Navigator.push(context,MaterialPageRoute(builder: (context) =>const CommunitiesScreen(),));
+       }
+        else if(index==3){
+         Navigator.push(context,MaterialPageRoute(builder: (context) =>const CallsScreen(),));
        }
       },
 
