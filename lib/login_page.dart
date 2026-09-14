@@ -14,7 +14,7 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
  List<Map<String, String>> countries = [
   {"country": "Egypt", "code": "+20"},
   {"country": "Saudi Arabia", "code": "+966"},
-  {"country": "United States", "code": "+1"},
+  {"country": "United States", "code": "+2"},
   {"country": "United Kingdom", "code": "+44"},
   {"country": "Germany", "code": "+49"},
   {"country": "France", "code": "+33"},
