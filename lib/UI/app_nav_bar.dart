@@ -51,7 +51,7 @@ class MySearchBar extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
         ),
         child: TextFormField(
-          autofocus: true,controller: controller,onChanged: onChanged,
+          autofocus: false,controller: controller,onChanged: onChanged,
           textAlignVertical: TextAlignVertical.center,
           style: const TextStyle(fontSize: 16, color: Color(0xFF050505)),
           decoration: InputDecoration(
